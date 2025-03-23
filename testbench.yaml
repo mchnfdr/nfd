@@ -1,3 +1,6 @@
+providers:
+  - Itsmattch\Nfd\Providers\AppServiceProvider
+
 migrations:
   - database/migrations
 

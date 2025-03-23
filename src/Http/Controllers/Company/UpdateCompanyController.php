@@ -12,6 +12,6 @@ class UpdateCompanyController extends Controller
 {
     public function __invoke(UpdateCompanyRequest $request, Company $company)
     {
-        //
+        // TODO
     }
 }

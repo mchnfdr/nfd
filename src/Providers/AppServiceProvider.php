@@ -64,7 +64,7 @@ class AppServiceProvider extends ServiceProvider
      */
     protected function bootRoutes(): void
     {
-        Route::middleware('api')->prefix('api/v1')->group(function () {
+        Route::middleware('api')->prefix('api/v1')->scopeBindings()->group(function () {
             include $this->packagePath('routes/api.php');
         });
     }

@@ -12,6 +12,6 @@ class ShowCompanyController extends Controller
 {
     public function __invoke(ShowCompanyRequest $request, Company $company)
     {
-        //
+        // TODO
     }
 }

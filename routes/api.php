@@ -26,8 +26,8 @@ Route::get('/companies/{company}', ShowCompanyController::class)->name('companie
 Route::put('/companies/{company}', UpdateCompanyController::class)->name('companies.update');
 Route::delete('/companies/{company}', DestroyCompanyController::class)->name('companies.destroy');
 
-Route::get('/employees', IndexEmployeeController::class)->name('employees.index');
-Route::post('/employees', StoreEmployeeController::class)->name('employees.store');
-Route::get('/employees/{employee}', ShowEmployeeController::class)->name('employees.show');
-Route::put('/employees/{employee}', UpdateEmployeeController::class)->name('employees.update');
-Route::delete('/employees/{employee}', DestroyEmployeeController::class)->name('employees.destroy');
+Route::get('/companies/{company}/employees', IndexEmployeeController::class)->name('companies.employees.index');
+Route::post('/companies/{company}/employees', StoreEmployeeController::class)->name('companies.employees.store');
+Route::get('/companies/{company}/employees/{employee}', ShowEmployeeController::class)->name('companies.employees.show');
+Route::put('/companies/{company}/employees/{employee}', UpdateEmployeeController::class)->name('companies.employees.update');
+Route::delete('/companies/{company}/employees/{employee}', DestroyEmployeeController::class)->name('companies.employees.destroy');

@@ -11,6 +11,6 @@ class StoreCompanyController extends Controller
 {
     public function __invoke(StoreCompanyRequest $request)
     {
-        //
+        // TODO
     }
 }

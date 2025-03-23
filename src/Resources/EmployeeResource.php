@@ -13,7 +13,13 @@ class EmployeeResource extends JsonResource implements EmployeeContract
     public function toArray(Request $request): array
     {
         return [
-            // TODO
+            'id' => $this->id,
+            'first_name' => $this->first_name,
+            'last_name' => $this->last_name,
+            'email' => $this->email,
+            'phone' => $this->phone,
+            'company_id' => $this->company_id,
+            'company' => CompanyResource::make($this->whenLoaded('employee')),
         ];
     }
 }

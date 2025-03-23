@@ -12,6 +12,6 @@ class DestroyCompanyController extends Controller
 {
     public function __invoke(DestroyCompanyRequest $request, Company $company)
     {
-        //
+        // TODO
     }
 }
