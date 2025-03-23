@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Itsmattch\Nfd\Http\Requests\Company;
 
 use Illuminate\Foundation\Http\FormRequest;
