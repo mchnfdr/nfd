@@ -14,11 +14,6 @@ use Itsmattch\Nfd\Policies\EmployeePolicy;
 
 class AppServiceProvider extends ServiceProvider
 {
-    public function register(): void
-    {
-        //
-    }
-
     public function boot(): void
     {
         $this->bootModels();
@@ -35,7 +30,9 @@ class AppServiceProvider extends ServiceProvider
     protected function bootModels(): void
     {
         Route::model('company', Company::class);
-        Route::model('employee', Employee::class);
+        Route::bind('employee', fn ($value, $route) => Employee::where('id', $value)
+            ->where('company_id', $route->parameter('company')?->id)
+            ->firstOrFail());
     }
 
     /**

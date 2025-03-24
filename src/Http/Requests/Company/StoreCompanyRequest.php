@@ -13,7 +13,11 @@ class StoreCompanyRequest extends FormRequest
     public function rules(): array
     {
         return [
-            // TODO
+            'name' => ['required', 'string', 'max:255'],
+            'address' => ['required', 'string', 'max:255'],
+            'city' => ['required', 'string', 'max:255'],
+            'postal_code' => ['required', 'string', 'digits:5'],
+            'tax_identifier' => ['required', 'string', 'digits:10', 'unique:companies,tax_identifier'],
         ];
     }
 

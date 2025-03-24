@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Itsmattch\Nfd\Http\Controllers\Employee;
 
-use Itsmattch\Nfd\Contract\Company;
 use Itsmattch\Nfd\Http\Controllers\Controller;
 use Itsmattch\Nfd\Http\Requests\Employee\IndexEmployeeRequest;
+use Itsmattch\Nfd\Models\Company;
 use Itsmattch\Nfd\Resources\EmployeeCollection;
 
 class IndexEmployeeController extends Controller
